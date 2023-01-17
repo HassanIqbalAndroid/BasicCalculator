@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textshow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        android:textSize="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/Maintxtshow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/Maintxtshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sep"
+        android:text="AC"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane1"
+        app:layout_constraintEnd_toStartOf="@+id/verti1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Maintxtshow"
+        app:layout_constraintDimensionRatio="1,1.2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/devide"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="/"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/btn_sep"
+        app:layout_constraintBottom_toTopOf="@+id/lane1"
+        app:layout_constraintEnd_toStartOf="@+id/verti2"
+        app:layout_constraintStart_toEndOf="@+id/reset"
+        app:layout_constraintTop_toTopOf="@+id/Maintxtshow"
+        app:layout_constraintDimensionRatio="1,1.2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sep"
+        android:text="X"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane1"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti3"
+        app:layout_constraintStart_toEndOf="@+id/devide"
+        app:layout_constraintTop_toTopOf="@+id/Maintxtshow"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/clear_l"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sep"
+        android:src="@drawable/icons8_clear_symbol_50"
+        app:layout_constraintBottom_toTopOf="@+id/lane1"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/multiply"
+        app:layout_constraintTop_toTopOf="@+id/Maintxtshow"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lane1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.44" />
+
+    <Button
+        android:id="@+id/int1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="1"
+        android:background="@drawable/btn_normal"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane2"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reset"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/int2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="2"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane2"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int1"
+        app:layout_constraintTop_toBottomOf="@+id/devide"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/int3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="3"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane2"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int2"
+        app:layout_constraintTop_toBottomOf="@+id/devide"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sp"
+        android:src="@drawable/minus"
+        app:layout_constraintBottom_toTopOf="@+id/lane2"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/int3"
+        app:layout_constraintTop_toBottomOf="@+id/reset"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lane2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.58" />
+
+    <Button
+        android:id="@+id/int4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="4"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane3"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lane2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/int5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="5"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane3"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int4"
+        app:layout_constraintTop_toTopOf="@+id/lane2"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/int6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="6"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane3"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int5"
+        app:layout_constraintTop_toTopOf="@+id/lane2"
+        tools:ignore="MissingConstraints" />
+
+
+    <ImageButton
+        android:id="@+id/plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sp"
+        android:src="@drawable/plus"
+        app:layout_constraintBottom_toTopOf="@+id/lane3"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/int3"
+        app:layout_constraintTop_toTopOf="@+id/lane2"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lane3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.72" />
+
+    <Button
+        android:id="@+id/int7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="7"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane4"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/int6"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/int8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="8"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane4"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int7"
+        app:layout_constraintTop_toBottomOf="@+id/int6"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/int9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="9"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lane4"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/int8"
+        app:layout_constraintTop_toBottomOf="@+id/int6"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/equals"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_sp"
+        android:src="@drawable/equals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1,0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/int3"
+        app:layout_constraintTop_toBottomOf="@+id/plus"
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/lane4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.86" />
+
+    <Button
+        android:id="@+id/int0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1,2.5"
+        app:layout_constraintEnd_toStartOf="@+id/verti2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/int8"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/intdot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/btn_normal"
+        android:text="."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1,1.2"
+        app:layout_constraintEnd_toStartOf="@+id/verti3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/int0"
+        app:layout_constraintTop_toBottomOf="@+id/int9"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verti1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verti2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verti3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
